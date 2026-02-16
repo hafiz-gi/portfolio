@@ -1,0 +1,1365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Flutter Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader-wrapper" id="loader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="#" class="logo">Hafiz<span>.</span>Dev</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="nav-btn" onclick="location.href = '#contact'">
+              Hire Me
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="dot"></div>
+            Available for Freelance Work
+          </div>
+          <h1>
+            <span class="greeting">Hello, I'm</span>
+            <span class="name">Hafiz Umar</span>
+          </h1>
+          <p class="role">
+            I'm a <span class="typewriter" id="typewriter"></span>
+          </p>
+          <p>
+            I craft beautiful, high-performance mobile applications using
+            Flutter & Dart that deliver seamless experiences across Android and
+            iOS platforms.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn-primary" onclick="location.href = '#portfolio'">
+              <i class="fas fa-rocket"></i> View My Work
+            </button>
+            <a
+              href="https://drive.google.com/file/d/1zWFntWXpz9Ek-1silbzqSG2hLRfILS-m/view?usp=drive_link"
+              target="_blank"
+              class="btn-outline"
+            >
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+          <!-- <div class="hero-socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-fiverr"></i></a>
+          </div> -->
+          <div class="hero-socials">
+            <a href="https://github.com/hafiz-gi" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/hafizumar26/" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://www.fiverr.com/s/1q6yAXK" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="20px"
+                height="20px"
+              >
+                <path
+                  d="M25,2C12.32,2,2,12.32,2,25s10.32,23,23,23s23-10.32,23-23S37.68,2,25,2z M34,36h-6V25h-4v11h-6V25h-4v-6h4.04 c0.37-4.96,3.54-8,8.46-8h2.53v6H26.5c-0.92,0-2.14,0-2.43,2H34V36z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.upwork.com/freelancers/~01e424e292d684ccb2?mp_source=share"
+              target="_blank"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="phone-scene">
+            <!-- Phone Mockup -->
+            <div class="phone-mockup">
+              <div class="phone-notch">
+                <div class="notch-cam"></div>
+              </div>
+              <div class="phone-screen">
+                <div class="app-statusbar">
+                  <span>9:41</span>
+                  <div class="status-icons">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-full"></i>
+                  </div>
+                </div>
+                <div class="app-top">
+                  <div class="app-top-left">
+                    <div class="app-user-avatar">
+                      <img src="https://i.pravatar.cc/100?img=12" alt="user" />
+                    </div>
+                    <div>
+                      <div class="app-welcome">Good Morning</div>
+                      <div class="app-username">John Doe ✨</div>
+                    </div>
+                  </div>
+                  <div class="app-top-right">
+                    <div class="app-notif-icon">
+                      <i class="fas fa-bell"></i>
+                      <span class="notif-dot"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="app-balance-card">
+                  <div class="balance-card-bg"></div>
+                  <div class="balance-card-circles">
+                    <div class="bc-circle c1"></div>
+                    <div class="bc-circle c2"></div>
+                  </div>
+                  <div class="balance-label">Total Balance</div>
+                  <div class="balance-amount">$12,480.<span>50</span></div>
+                  <div class="balance-row">
+                    <div class="balance-item">
+                      <div class="balance-item-icon income">
+                        <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div>
+                        <div class="balance-item-label">Income</div>
+                        <div class="balance-item-value">$8,200</div>
+                      </div>
+                    </div>
+                    <div class="balance-divider"></div>
+                    <div class="balance-item">
+                      <div class="balance-item-icon expense">
+                        <i class="fas fa-arrow-up"></i>
+                      </div>
+                      <div>
+                        <div class="balance-item-label">Expense</div>
+                        <div class="balance-item-value">$3,720</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="app-quick-actions">
+                  <div class="quick-action">
+                    <div class="quick-icon qi-1">
+                      <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <span>Send</span>
+                  </div>
+                  <div class="quick-action">
+                    <div class="quick-icon qi-2">
+                      <i class="fas fa-qrcode"></i>
+                    </div>
+                    <span>Scan</span>
+                  </div>
+                  <div class="quick-action">
+                    <div class="quick-icon qi-3">
+                      <i class="fas fa-wallet"></i>
+                    </div>
+                    <span>Top Up</span>
+                  </div>
+                  <div class="quick-action">
+                    <div class="quick-icon qi-4">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <span>More</span>
+                  </div>
+                </div>
+                <div class="app-transactions">
+                  <div class="transactions-header">
+                    <span class="trans-title">Transactions</span>
+                    <span class="trans-see-all">See All</span>
+                  </div>
+                  <div class="transaction-item">
+                    <div class="trans-icon ti-spotify">
+                      <i class="fab fa-spotify"></i>
+                    </div>
+                    <div class="trans-details">
+                      <div class="trans-name">Spotify</div>
+                      <div class="trans-date">Today, 10:30 AM</div>
+                    </div>
+                    <div class="trans-amount negative">-$12.99</div>
+                  </div>
+                  <div class="transaction-item">
+                    <div class="trans-icon ti-receive">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="trans-details">
+                      <div class="trans-name">Payment Received</div>
+                      <div class="trans-date">Yesterday, 3:45 PM</div>
+                    </div>
+                    <div class="trans-amount positive">+$2,400</div>
+                  </div>
+                  <div class="transaction-item">
+                    <div class="trans-icon ti-netflix">
+                      <i class="fas fa-film"></i>
+                    </div>
+                    <div class="trans-details">
+                      <div class="trans-name">Netflix</div>
+                      <div class="trans-date">Dec 15, 9:00 AM</div>
+                    </div>
+                    <div class="trans-amount negative">-$15.99</div>
+                  </div>
+                </div>
+                <div class="app-bottom-nav">
+                  <div class="bnav-item active">
+                    <i class="fas fa-home"></i><span>Home</span>
+                  </div>
+                  <div class="bnav-item">
+                    <i class="fas fa-chart-pie"></i><span>Stats</span>
+                  </div>
+                  <div class="bnav-center"><i class="fas fa-plus"></i></div>
+                  <div class="bnav-item">
+                    <i class="fas fa-credit-card"></i><span>Cards</span>
+                  </div>
+                  <div class="bnav-item">
+                    <i class="fas fa-user"></i><span>Profile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating UI Elements -->
+            <div class="float-element float-btn">
+              <div class="float-label">Button Widget</div>
+              <div class="mock-btn">
+                <i class="fas fa-rocket"></i> Get Started
+              </div>
+            </div>
+
+            <div class="float-element float-card">
+              <div class="float-label">Card Widget</div>
+              <div class="mock-card">
+                <div class="mock-card-shimmer"></div>
+                <div class="mock-card-row">
+                  <div class="mock-avatar-sm"></div>
+                  <div class="mock-lines">
+                    <div class="mock-line w70"></div>
+                    <div class="mock-line w50"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="float-element float-navbar">
+              <div class="float-label">AppBar</div>
+              <div class="mock-appbar">
+                <i class="fas fa-bars"></i>
+                <span>My App</span>
+                <i class="fas fa-bell"></i>
+              </div>
+            </div>
+
+            <div class="float-element float-colors">
+              <div class="float-label">Theme</div>
+              <div class="mock-colors">
+                <span class="color-dot" style="background: #6c63ff"></span>
+                <span class="color-dot" style="background: #00d4aa"></span>
+                <span class="color-dot" style="background: #ff6584"></span>
+                <span class="color-dot" style="background: #f9e2af"></span>
+              </div>
+            </div>
+
+            <div class="float-element float-toggle">
+              <div class="float-label">Switch</div>
+              <div class="mock-toggle">
+                <div class="toggle-track"><div class="toggle-thumb"></div></div>
+                <span>Dark Mode</span>
+              </div>
+            </div>
+
+            <div class="float-element float-input">
+              <div class="float-label">TextField</div>
+              <div class="mock-input">
+                <i class="fas fa-search"></i>
+                <span>Search...</span>
+                <div class="input-cursor"></div>
+              </div>
+            </div>
+
+            <div class="float-element float-slider">
+              <div class="float-label">Slider</div>
+              <div class="mock-slider">
+                <div class="slider-label-row">
+                  <span>Volume</span>
+                  <span class="slider-value">72%</span>
+                </div>
+                <div class="slider-track">
+                  <div class="slider-fill"></div>
+                  <div class="slider-knob"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="float-element float-chips">
+              <div class="float-label">Chips</div>
+              <div class="mock-chips">
+                <div class="mock-chip chip-active">
+                  <i class="fas fa-check"></i> Flutter
+                </div>
+                <div class="mock-chip">Dart</div>
+                <div class="mock-chip">Firebase</div>
+              </div>
+            </div>
+
+            <!-- Connection Lines -->
+            <svg class="connection-lines" viewBox="0 0 700 650" fill="none">
+              <path class="conn-line" d="M350,100 Q450,80 520,60" />
+              <path class="conn-line" d="M350,200 Q440,190 510,170" />
+              <path class="conn-line" d="M350,350 Q440,370 510,400" />
+              <path class="conn-line" d="M350,420 Q450,450 520,470" />
+              <path class="conn-line" d="M350,80 Q250,70 180,50" />
+              <path class="conn-line" d="M350,250 Q250,240 170,230" />
+              <path class="conn-line" d="M350,380 Q250,400 170,420" />
+              <path class="conn-line" d="M350,480 Q260,500 180,520" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container">
+        <div class="stat-card reveal">
+          <div class="number" data-target="60">0</div>
+          <div class="label">Projects Completed</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="number" data-target="50">0</div>
+          <div class="label">Happy Clients</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="number" data-target="6">0</div>
+          <div class="label">Years Experience</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="number" data-target="70">0</div>
+          <div class="label">5-Star Reviews</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about-image reveal-left">
+          <div class="about-img-card">
+            <!-- <div class="about-placeholder">
+                        <i class="fas fa-code"></i>
+                        <span>Your Photo Here</span>
+                    </div> -->
+            <img src="assets/umar1.jpg" alt="About" class="about-img" />
+          </div>
+          <div class="experience-badge">
+            <div class="number">6+</div>
+            <div class="text">Years of<br />Experience</div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <div
+            class="section-header"
+            style="text-align: left; margin-bottom: 20px"
+          >
+            <h2>About Me</h2>
+            <div class="line" style="margin: 15px 0 0"></div>
+          </div>
+          <h3>A Passionate Flutter Developer Based in Your City</h3>
+          <p>
+            I'm a dedicated mobile app developer specializing in Flutter and
+            Dart. I build cross-platform applications that are not only visually
+            stunning but also perform flawlessly on both Android and iOS.
+          </p>
+          <p>
+            My mission is to transform your ideas into pixel-perfect,
+            high-performance mobile apps that users love. I focus on clean
+            architecture, smooth animations, and intuitive user experiences.
+          </p>
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <div class="info-label">Name</div>
+                <div class="info-value">Hafiz Umar</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <div class="info-label">Email</div>
+                <div class="info-value">hafizumarkamboh73@gmail.com</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <div class="info-label">Location</div>
+                <div class="info-value">Lahore, Pakistan</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <div class="info-label">Freelance</div>
+                <div class="info-value" style="color: var(--secondary)">
+                  Available
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-primary" onclick="location.href = '#contact'">
+            <i class="fas fa-paper-plane"></i> Let's Talk
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Services</h2>
+          <p>
+            Premium solutions tailored to bring your mobile app vision to life
+          </p>
+          <div class="line"></div>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Flutter App Development</h3>
+            <p>
+              Custom cross-platform mobile apps built with Flutter for seamless
+              performance on both Android and iOS from a single codebase.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>UI/UX Implementation</h3>
+            <p>
+              Pixel-perfect conversion of your Figma, XD, or Sketch designs into
+              beautiful, responsive Flutter interfaces with smooth animations.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fas fa-database"></i></div>
+            <h3>Backend Integration</h3>
+            <p>
+              Seamless integration with Firebase, REST APIs, GraphQL, and other
+              backend services to power your app with real-time data.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+            <h3>E-Commerce Apps</h3>
+            <p>
+              Feature-rich e-commerce applications with payment gateways,
+              product management, cart systems, and order tracking.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fas fa-bug"></i></div>
+            <h3>Bug Fixes & Optimization</h3>
+            <p>
+              Identify and resolve bugs, improve app performance, optimize code,
+              and enhance the overall user experience of your existing app.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fas fa-rocket"></i></div>
+            <h3>App Store Deployment</h3>
+            <p>
+              Complete assistance with publishing your app to Google Play Store
+              and Apple App Store with proper optimization and assets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills & Technologies</h2>
+          <p>The tools and technologies I use to bring your ideas to life</p>
+          <div class="line"></div>
+        </div>
+        <div class="skills-container">
+          <div class="skills-left reveal-left">
+            <h3>My Expertise</h3>
+            <p>
+              With years of experience in mobile development, I've honed my
+              skills across various technologies and frameworks.
+            </p>
+            <div class="skill-bars">
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">Flutter / Dart</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="bar"><div class="fill" data-width="95%"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">Firebase</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="bar"><div class="fill" data-width="90%"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">REST API Integration</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="bar"><div class="fill" data-width="88%"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">State Management</span>
+                  <span class="skill-percent">92%</span>
+                </div>
+                <div class="bar"><div class="fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">UI/UX Design</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="bar"><div class="fill" data-width="85%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-right reveal-right">
+            <div class="tech-card">
+              <i class="devicon-flutter-plain"></i>
+              <span>Flutter</span>
+            </div>
+            <div class="tech-card">
+              <!-- <img
+                class="tech-svg-icon"
+                src="https://cdn.simpleicons.org/dart/0175C2"
+                width="40"
+                height="40"
+                alt="Dart"
+              /> -->
+              <svg width="40" height="40" viewBox="0 0 128 128">
+                <path
+                  fill="#00c4b3"
+                  d="M35.2 34.9l-8.3-8.3v59.7l.1 2.8c0 1.3.2 2.8.7 4.3l65.6 23.1 16.3-7.2-74.4-74.4z"
+                ></path>
+                <path
+                  d="M27.7 93.4zm81.9 15.9l-16.3 7.2-65.4-23.1c1.3 4.8 4 10.1 7 13.2l21.3 21.2 47.6.1 5.8-18.6z"
+                  fill="#22d3c5"
+                ></path>
+                <path
+                  fill="#0075c9"
+                  d="M1.7 65.1C-.4 67.3.7 72 4 75.5l14.7 14.8 9.2 3.3c-.3-1.5-.7-3-.7-4.3l-.1-2.8-.2-59.8m82.7 82.6l7.2-16.4-23-65.6c-1.5-.3-3-.6-4.3-.7l-2.9-.1-59.6.1"
+                ></path>
+                <path
+                  d="M93.6 27.3c.2 0 .2 0 0 0 .2 0 .2 0 0 0zm16 82l17.7-5.8V54.8l-20.4-20.5c-3-3-8.3-5.8-13.2-7l23.1 65.6"
+                  fill="#00a8e1"
+                ></path>
+                <path
+                  fill="#00c4b3"
+                  d="M90.5 18.2L75.7 3.5c-3.4-3.4-8-4.4-10.4-2.3L26.9 26.6h59.5l2.9.1c1.3 0 2.8.2 4.3.7l-3.1-9.2z"
+                ></path>
+              </svg>
+              <span>Dart</span>
+            </div>
+            <div class="tech-card">
+              <i class="devicon-firebase-plain"></i>
+              <span>Firebase</span>
+            </div>
+            <div class="tech-card">
+              <i class="devicon-git-plain"></i>
+              <span>Git</span>
+            </div>
+            <div class="tech-card">
+              <i class="fas fa-server"></i>
+              <span>REST APIs</span>
+            </div>
+            <div class="tech-card">
+              <i class="devicon-figma-plain"></i>
+              <span>Figma</span>
+            </div>
+            <div class="tech-card">
+              <i class="devicon-android-plain"></i>
+              <span>Android</span>
+            </div>
+            <div class="tech-card">
+              <i class="devicon-apple-original"></i>
+              <span>iOS</span>
+            </div>
+            <div class="tech-card">
+              <i class="devicon-azuresqldatabase-plain"></i>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Portfolio</h2>
+          <p>A showcase of my recent projects and creative work</p>
+          <div class="line"></div>
+        </div>
+        <!-- <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+          <button class="filter-btn" data-filter="ui">UI/UX</button>
+        </div> -->
+        <div class="portfolio-grid">
+          <!-- Project 1 -->
+          <div
+            class="portfolio-card reveal"
+            data-category="mobile"
+            data-title="Swiftly: E-commerce & Services"
+            data-cat="E-commerce"
+            data-year="2024"
+            data-skills="Flutter, Firebase, Stripe, Google Maps, Node.js, Figma"
+            data-description="Swiftly: E-commerce & Services is an all-in-one app for shopping, service booking, and short video ads. Discover products, place orders, track deliveries, and manage your history with ease. Book trusted professionals for cleaning, plumbing, painting, and more. Explore TikTok-style video ads to find great deals. Enjoy games, vouchers, rewards, dark mode, and a smart virtual assistant for support, recommendations, and seamless navigation — all in one powerful marketplace."
+            data-thumbnail="assets/swiftly/swiftly.png"
+            data-mockup="assets/swiftly/swiftly mockups.png"
+            data-github="https://github.com/yourusername/food-delivery-app"
+          >
+            <div class="portfolio-img">
+              <img
+                src="assets/swiftly/swiftly.png"
+                alt="About"
+                class="about-img"
+              />
+              <div class="portfolio-overlay">
+                <a href="#" class="portfolio-view-btn" title="View Details"
+                  ><i class="fas fa-eye"></i
+                ></a>
+                <a
+                  href="https://github.com/yourusername/food-delivery-app"
+                  target="_blank"
+                  title="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="category">Ecommerce</span>
+              <h3>Swiftly: E-commerce & Services</h3>
+              <div class="tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Stripe</span>
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">Google Map</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="portfolio-card reveal"
+            data-category="ecommerce"
+            data-title="KidGenius"
+            data-cat="E-Learning ● Education"
+            data-year="2025"
+            data-skills="Flutter, Firebase, Node.js, Figma, In-App Purchases"
+            data-description="KidGenius – Where Learning Becomes an Adventure! Turn screen time into brain time with a safe, ad-free learning app for ages 3–8. Kids explore math, reading, science, and art through fun games, quizzes, and creative activities while earning stars and rewards. Personalized paths adapt to every child’s level. Parents get controls and progress reports. With colorful worlds, cute guides, and daily challenges, KidGenius makes learning exciting, engaging, and confidence-boosting every day."
+            data-thumbnail="assets/kid_genius/kid genius.png"
+            data-mockup="assets/kid_genius/kid genius mockups.png"
+            data-github="https://github.com/yourusername/fashion-store-app"
+          >
+            <div class="portfolio-img">
+              <img
+                src="assets/kid_genius/kid genius.png"
+                alt="About"
+                class="about-img"
+              />
+              <div class="portfolio-overlay">
+                <a href="#" class="portfolio-view-btn" title="View Details"
+                  ><i class="fas fa-eye"></i
+                ></a>
+                <a
+                  href="https://github.com/yourusername/fashion-store-app"
+                  target="_blank"
+                  title="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="category">E-learning ● Education</span>
+              <h3>KidGenius</h3>
+              <div class="tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">In-App Purchases</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="portfolio-card reveal"
+            data-category="mobile"
+            data-title="FitTrack Pro"
+            data-cat="Fitness ● Gym ● Sports"
+            data-year="2025"
+            data-skills="Flutter, Firebase, Node.js, Figma, In-App Purchases"
+            data-description="FitTrack Pro Fitness & Training helps you build stronger habits and transform your body with guided workouts, HD exercise videos, smart diet plans, and powerful progress tracking. Follow personalized programs with timers, rep counters, and real-time stats. Track calories, meals, weight, and performance with detailed analytics. Join challenges, earn achievements, and stay consistent at home or the gym. Simple design, expert guidance, and real results—start your fitness journey today."
+            data-thumbnail="assets/fit_track/fittrack pro.png"
+            data-mockup="assets/fit_track/fittrack mockups.png"
+            data-github="https://github.com/yourusername/fitness-tracker"
+          >
+            <div class="portfolio-img">
+              <img
+                src="assets/fit_track/fittrack pro.png"
+                alt="About"
+                class="about-img"
+              />
+              <div class="portfolio-overlay">
+                <a href="#" class="portfolio-view-btn" title="View Details"
+                  ><i class="fas fa-eye"></i
+                ></a>
+                <a
+                  href="https://github.com/yourusername/fitness-tracker"
+                  target="_blank"
+                  title="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="category">Fitness ● Gym ● Sports</span>
+              <h3>FitTrack Pro</h3>
+              <div class="tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">In-App Purchases</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="portfolio-card reveal"
+            data-category="ui"
+            data-title="ChatFlow"
+            data-cat="Social Media"
+            data-year="2023"
+            data-skills="Flutter, Firebase, Node.js, Agora, Figma"
+            data-description="ChatFlow is an all-in-one messaging app for fast, seamless communication on Android and iOS. Send texts, voice notes, photos, videos, and documents instantly. Create groups, share live locations, run polls, and react in real time. Enjoy crystal-clear voice and HD video calls anywhere. With secure login, end-to-end encryption, cloud sync, and a clean, modern design, ChatFlow keeps every conversation smooth, private, and connected—perfect for friends, family, and teams."
+            data-thumbnail="assets/chat_flow/chatflow.png"
+            data-mockup="assets/chat_flow/chatflow mockups.png"
+            data-github="https://github.com/yourusername/chat-messenger"
+          >
+            <div class="portfolio-img">
+              <img
+                src="assets/chat_flow/chatflow.png"
+                alt="About"
+                class="about-img"
+              />
+              <div class="portfolio-overlay">
+                <a href="#" class="portfolio-view-btn" title="View Details"
+                  ><i class="fas fa-eye"></i
+                ></a>
+                <a
+                  href="https://github.com/yourusername/chat-messenger"
+                  target="_blank"
+                  title="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="category">Social Media</span>
+              <h3>ChatFlow</h3>
+              <div class="tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Agora</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="portfolio-card reveal"
+            data-category="ecommerce"
+            data-title="Mindlux Meditation"
+            data-cat="Health & Wellness ● Meditation"
+            data-year="2022"
+            data-skills="Flutter, Firebase, Node.js, Figma, In-App Purchases"
+            data-description="Mindlux is a modern meditation and mindfulness app to help you relax, focus, and sleep better. Explore guided meditations, breathing exercises, sleep stories, and soothing soundscapes to reduce stress and clear your mind. Track progress, build daily streaks, set reminders, and form healthy habits. With offline access, a beautiful dark interface, and personalized sessions, Mindlux brings calm, clarity, and balance to your everyday life—anytime, anywhere."
+            data-thumbnail="assets/mindlux/mindlux.png"
+            data-mockup="assets/mindlux/mindlux mockups.png"
+            data-github="https://github.com/yourusername/restaurant-app"
+          >
+            <div class="portfolio-img">
+              <img
+                src="assets/mindlux/mindlux.png"
+                alt="About"
+                class="about-img"
+              />
+              <div class="portfolio-overlay">
+                <a href="#" class="portfolio-view-btn" title="View Details"
+                  ><i class="fas fa-eye"></i
+                ></a>
+                <a
+                  href="https://github.com/yourusername/restaurant-app"
+                  target="_blank"
+                  title="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="category">Health & Wellness ● Meditation</span>
+              <h3>Mindlux Meditation</h3>
+              <div class="tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">In-App Purchases</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Client Reviews</h2>
+          <p>What my clients say about working with me</p>
+          <div class="line"></div>
+        </div>
+        <div class="testimonials-slider">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <blockquote>
+                "Hafiz delivered on what he promised, which came as a huge
+                relief after working with developers who tend to over promise
+                and under deliver. The specifications were done to mark, and
+                user experience intuitive. Crucially, I appreciated Hafiz's
+                quick response time and attentiveness, making the process as
+                smooth as possible. I would highly recommend Hafiz for people
+                looking to realise their mobile app ideas!"
+              </blockquote>
+              <div class="client-info">
+                <div class="client-avatar">CH</div>
+                <div class="client-details">
+                  <h4>chriscasim</h4>
+                  <span>Fiverr</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <blockquote>
+                "After having a terrible time on Fiverr with other sellers and
+                finally finding this seller. I can express how much I am
+                grateful for his speed, patience, and actual talent!
+                Recommending this seller to anyone who is unsure of who to
+                contract! You won't regret it!."
+              </blockquote>
+              <div class="client-info">
+                <div class="client-avatar">KA</div>
+                <div class="client-details">
+                  <h4>katyora</h4>
+                  <span>Fiverr</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <blockquote>
+                "FLAWLESS…I have worked with 5 developers in the last year and a
+                half and not once have I gotten a project back exactly as I
+                wanted it. Today that changed!!! Hafizumar just delivered the
+                most beautiful update exactly as agreed….not only was the work
+                FLAWLESS it was delivered 2 days early!! Will not need another
+                developer since we have found him!"
+              </blockquote>
+              <div class="client-info">
+                <div class="client-avatar">FD</div>
+                <div class="client-details">
+                  <h4>fivediamonds20</h4>
+                  <span>Fiverr</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <blockquote>
+                "There are normal sellers on Fiverr, and then there are those
+                who are legends. This seller is an absolute legend—trustworthy,
+                honest, reliable, and professional. For any mobile app
+                development task, you can be 100% certain that he will complete
+                it on time."
+              </blockquote>
+              <div class="client-info">
+                <div class="client-avatar">PC</div>
+                <div class="client-details">
+                  <h4>palliativecare</h4>
+                  <span>Fiverr</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <blockquote>
+                "It was a pleasure working with Hafiz. After the brief, he
+                started working on my app. He was very efficient and quick. The
+                app does exactly what I wanted and it looks very good. I'm sure
+                I will hire him again in the future for other projects."
+              </blockquote>
+              <div class="client-info">
+                <div class="client-avatar">LI</div>
+                <div class="client-details">
+                  <h4>lingoist</h4>
+                  <span>Fiverr</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <blockquote>
+                "Had an exceptional experience working with Hafiz. He well
+                understood the product requirements and worked closely with us
+                to debug and make sure the app delivered on its features and
+                functionalities. Outstanding developer who goes the extra mile
+                and above all, has integrity and a clear drive for delivery
+                excellence. Would recommend Hafiz anytime."
+              </blockquote>
+              <div class="client-info">
+                <div class="client-avatar">CH</div>
+                <div class="client-details">
+                  <h4>chriscasim</h4>
+                  <span>Fiverr</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn" id="nextBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="slider-dots" id="sliderDots">
+            <div class="slider-dot active" data-index="0"></div>
+            <div class="slider-dot" data-index="1"></div>
+            <div class="slider-dot" data-index="2"></div>
+            <div class="slider-dot" data-index="3"></div>
+            <div class="slider-dot" data-index="4"></div>
+            <div class="slider-dot" data-index="5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact-info reveal-left">
+          <div
+            class="section-header"
+            style="text-align: left; margin-bottom: 20px"
+          >
+            <h2>Get In Touch</h2>
+            <div class="line" style="margin: 15px 0 0"></div>
+          </div>
+          <h3>Let's Build Something Amazing Together</h3>
+          <p>
+            Have a project in mind? I'd love to hear about it. Send me a message
+            and let's discuss how I can help bring your app idea to life.
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>hafizumarkamboh73@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <p>+92 308 6111546</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>Lahore, Pakistan</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <!-- <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a> -->
+            <a href="https://github.com/hafiz-gi" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/hafizumar26/" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://www.fiverr.com/s/1q6yAXK" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="20px"
+                height="20px"
+              >
+                <path
+                  d="M25,2C12.32,2,2,12.32,2,25s10.32,23,23,23s23-10.32,23-23S37.68,2,25,2z M34,36h-6V25h-4v11h-6V25h-4v-6h4.04 c0.37-4.96,3.54-8,8.46-8h2.53v6H26.5c-0.92,0-2.14,0-2.43,2H34V36z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.upwork.com/freelancers/~01e424e292d684ccb2?mp_source=share"
+              target="_blank"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group full">
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="form-group full">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="#" class="logo">Hafiz<span>.</span>Dev</a>
+            <p>
+              Crafting beautiful cross-platform mobile experiences with Flutter.
+              Let's build something amazing together.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Mobile App Development</a></li>
+              <li><a href="#">UI/UX Design (Figma)</a></li>
+              <li><a href="#">API Integration</a></li>
+              <li><a href="#">App Deployment</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="mailto:hafizumarkamboh73@gmail.com"
+                  >hafizumarkamboh73@gmail.com</a
+                >
+              </li>
+              <li><a href="tel:+923086111546">+92 308 6111546</a></li>
+              <li><a href="#">Lahore, Pakistan</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 <a href="#">Hafiz.Dev</a>. All rights reserved.</p>
+          <button
+            class="back-to-top"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          >
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <!-- ===== PROJECT MODAL ===== -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-container">
+        <!-- Close Button -->
+        <button class="modal-close" id="modalClose">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="modal-content" id="modalContent">
+          <!-- Top Section: Info Left + Thumbnail Right -->
+          <div class="modal-top">
+            <!-- Left: Info -->
+            <div class="modal-info">
+              <span class="modal-category" id="modalCategory"></span>
+              <h2 class="modal-title" id="modalTitle"></h2>
+
+              <div class="modal-meta">
+                <div class="modal-meta-item">
+                  <i class="fas fa-layer-group"></i>
+                  <div>
+                    <span>Category</span>
+                    <strong id="modalCat"></strong>
+                  </div>
+                </div>
+                <div class="modal-meta-item">
+                  <i class="fas fa-calendar"></i>
+                  <div>
+                    <span>Year</span>
+                    <strong id="modalYear">2024</strong>
+                  </div>
+                </div>
+                <div class="modal-meta-item">
+                  <i class="fas fa-mobile-alt"></i>
+                  <div>
+                    <span>Platform</span>
+                    <strong>Android & iOS</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-section">
+                <h4><i class="fas fa-info-circle"></i> About Project</h4>
+                <p id="modalDescription"></p>
+              </div>
+
+              <div class="modal-section">
+                <h4><i class="fas fa-code"></i> Tech Stack</h4>
+                <div class="modal-skills" id="modalSkills"></div>
+              </div>
+
+              <div class="modal-actions">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="btn-primary modal-btn modal-github-btn"
+                  id="modalGithub"
+                >
+                  <i class="fab fa-github"></i>
+                  <div class="btn-text-wrap">
+                    <span class="btn-main-text">View Source Code</span>
+                    <span class="btn-sub-text">Browse on GitHub</span>
+                  </div>
+                  <i class="fas fa-arrow-right btn-arrow"></i>
+                </a>
+                <button
+                  class="btn-outline modal-btn"
+                  id="modalContactBtn"
+                  onclick="
+                    document
+                      .getElementById('projectModal')
+                      .classList.remove('active');
+                    document.body.style.overflow = '';
+                    location.href = '#contact';
+                  "
+                >
+                  <i class="fas fa-paper-plane"></i> Hire Me
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Thumbnail Image -->
+            <div class="modal-thumbnail-wrapper">
+              <div class="modal-thumb-label">
+                <i class="fas fa-image"></i> Project Preview
+              </div>
+              <div class="modal-thumbnail" id="modalThumbnail">
+                <img src="" alt="" id="modalThumbImg" />
+                <div class="modal-thumb-zoom">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Section: Full Width Mockup -->
+          <div class="modal-mockup-section">
+            <div class="mockup-heading">
+              <div class="mockup-heading-left">
+                <div class="mockup-heading-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div>
+                  <h3>App Mockup</h3>
+                  <p>
+                    Visual presentation of the application design and user
+                    interface
+                  </p>
+                </div>
+              </div>
+              <div class="mockup-heading-line"></div>
+            </div>
+            <div class="modal-mockup-img" id="modalMockup">
+              <img src="" alt="" id="modalMockupImg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
