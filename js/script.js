@@ -338,12 +338,39 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   btn.innerHTML = '<span class="spinner"></span> Sending...';
 
   // Get server time (UTC)
+  // Get client's local time
   const now = new Date();
-  const serverTime = now.toUTCString();
+
+  const clientTime = now.toLocaleString("en-US", {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+    timeZoneName: "short",
+  });
+
+  // Convert to your country time (Pakistan - Change if needed)
+  const myCountryTime = now.toLocaleString("en-US", {
+    timeZone: "Asia/Karachi",
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+
+  const serverTime = `📍 Client: ${clientTime}\n🏠 Pakistan: ${myCountryTime} PKT`;
 
   // Prepare template params
   const templateParams = {
-    "app-name": "Dev.Folio", // <-- Change to your app/portfolio name
+    "app-name": "Hafiz.Dev", // <-- Change to your app/portfolio name
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     subject: document.getElementById("subject").value,
